@@ -69,23 +69,28 @@ print("Done.")
 
 time.sleep(5)
 
-# CHECK IF THERE'S ALREADY AN ENTRY
-
 print("Accessing entries...")
-fis = driver.find_element_by_xpath("//h4[contains(text(),'"+courses[0]+"')]")
-# fis = driver.find_element_by_xpath("//h4[contains(text(),'ESTADÍSTICA - 1920_msegovia@ugr.es_E')]")
+count = 1
+for i in courses:
+    print(i)
+    print(count,"/",len(courses))
+    actualCourse = driver.find_element_by_xpath("//h4[contains(text(),'"+i+"')]")
+    # fis = driver.find_element_by_xpath("//h4[contains(text(),'ESTADÍSTICA - 1920_msegovia@ugr.es_E')]")
+    actualCourse.click()
+    print("Done.")
+    print("Saving HTML...")
+    time.sleep(5)
+    body = driver.find_element_by_xpath("/html/body/div[1]/div[3]/div/div[3]/div/section/div/div")
+    text = body.get_attribute('innerHTML')
 
-fis.click()
-print("Done.")
+    file_ = open('page'+i+'.html','w')
+    file_.write(text)
+    file_.close()
+    print("Done.")
+    driver.execute_script("window.history.go(-1)")
+    time.sleep(5)
+    count += 1
 
-print("Saving HTML...")
-body = driver.find_element_by_xpath("/html/body/div[1]/div[3]/div/div[3]/div/section/div/div")
-text = body.get_attribute('innerHTML')
-
-file_ = open('page.html','w')
-file_.write(text)
-file_.close()
-print("Done.")
 
 
 print("Task done. Quitting.")
