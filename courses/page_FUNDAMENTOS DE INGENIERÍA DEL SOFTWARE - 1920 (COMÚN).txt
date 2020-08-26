@@ -1,0 +1,460 @@
+Diagrama de temas
+General
+General
+Avisos
+Foro
+Guía FIS
+Archivo
+Información sobre la asignatura Fundamentos de Ingeniería del Software
+ETSIIT_GII_FIS_1920_FundamentosIS_masAdenda.pdf
+Archivo
+Guia Docente de la Asignatura FIS + Adenda
+Teoría
+Teoría
+TEMA 1. Introducción a la Ingeniería del Software.
+Tema 1 Introducción a la Ingeniería del Software
+Archivo
+Problemas
+Carpeta
+TEMA 2. Ingeniería de Requisitos.
+2.1. Introducción a la ingeniería de requisitos.
+2.2. Obtención de requisitos.
+2.3. Modelado de casos de uso.
+2.4. Especificación y análisis.
+Tema 2. Ingeniería de Requisitos
+Tema 2.1 - Introduccion.pdf
+Tema 2.2 - Obtencion de requisitos.pdf
+Tema 2.3 - Casos de uso.pdf
+Tema 2.4 - Analisis y Especificacion.pdf
+Seminarios
+Carpeta
+Relaciones de ejercicios del Tema 2
+Ejercicios
+relacion2_1.pdf
+relacion2_2.pdf
+relacion2_3.pdf
+Material de teoría
+furps.pdf
+ListaRequisitosEstructurada_ACB.pdf
+ListaRequisitosEstructurada_videoclub.pdf
+nomenclaturaContratos.pdf
+plantillacontrato.odt
+Plantillas_CU.zip
+TEMA 3. Diseño e implementación.
+3.1. Introducción al diseño
+3.2. Diseño de los casos de uso
+3.3. Diseño de la estructura de objetos
+3.4. Diseño de la arquitectura
+Tema 3. Diseño e implementación
+Tema 3.1 - Introduccion al diseno.pdf
+Tema 3.2 - Diseno de los casos de uso.pdf
+Tema 3.3 - Diseño de la estructura de clases.pdf
+Tema 3.4 - Diseno de la arquitectura.pdf
+Seminarios
+Seminario_DiagramaComunicacion.pdf
+Seminario_HerramientasDiseño.pdf
+Seminario_MDA.pdf
+TEMA 4. Otros Aspectos de la Ingeniería del Software.
+Tema 4. Otros aspectos de la Ingeniería del Software.
+Tema 4.1 - Gestion y Planificacion.pdf
+Tema 4.2 - Verificacion y Validacion.pdf
+Tema 4.3 -Mantenimiento del software.pdf
+VÍDEOS
+VÍDEOS
+En esta sección se incluyen vídeos
+TEMA 2.3 Modelado de Casos de Uso
+Recapitulación del Tema 2.3
+URL
+Estado del Tema 2.3 el día de la suspensión de actividades docentes presenciales.
+Relaciones de inclusión
+URL
+Relaciones de extensión
+URL
+Generalización de casos de uso
+URL
+Guía de utilización de relaciones entre casos de uso
+URL
+Diagramas de Paquetes
+URL
+Diagramas de actividad
+URL
+Proceso de construcción  del Modelo de Casos de Uso
+URL
+Supuesto Centro de Salud
+Archivo
+Ejemplo del Modelo de Casos de Uso usado en el video del Proceso de Construccion.
+TEMA 2.4 Análisis y Especificación de Requisitos
+Análisis y Especificación de Requisitos. Introducción
+URL
+Modelo estático: Diagrama Conceptual
+URL
+Ejercicio de Modelo Estático ESR
+URL
+Supuesto_ESR.pdf
+Archivo
+Supuesto usado en el video del ejemplo de la ESR. Podéis usar este fichero para ir anotando los elementos que se van detectando en el video.
+DiagramaConceptos_ESR.pdf
+Archivo
+Solución propuesta para el supuesto ESR.
+Seminario Diagrama de Clases
+URL
+Modelo Dinámico. Introducción
+URL
+Modelo Dinámico. Diagrama de secuencia del Sistema I
+URL
+Modelo Dinámico. DSS II
+URL
+Modelo Dinámico. Contratos
+URL
+Seminario: Diagramas de Secuencia
+URL
+Diagrama de conceptos del supuesto "Gestión de Almacén"
+URL
+Video con el proceso de obtener una posible solución al ejercicio pedido la semana del 13 al 17 de abril
+DiagramaConceptos_Almacen.pdf
+Archivo
+Diagrama con la solución propuesta (ejercicio 9 de la relación 2.3)
+Diagrama de Secuencia del Sistema del supuesto "Gestión de Almacén"
+URL
+Video con el proceso de obtener una posible solución al ejercicio pedido la semana del 20 al 24 de abril
+DSS_GestionAlmacen.pdf
+Archivo
+Diagrama con la solución propuesta al DSS del supuesto de la gestión de almacenes
+TEMA 3.1 Introducción al Diseño
+Tema 3.1 Introducción al Diseño (1)
+URL
+Tema 3.1. Introducción al diseño (2)
+URL
+TEMA 3.2 Diseño de los Casos de Uso
+Diseño de los casos de uso (1)
+URL
+Diseño de los casos de uso (2)
+URL
+Seminario diagramas de comunicación
+URL
+Diagramas de comunicación. Elementos importantes
+URL
+TEMA 3.3 Diseño de la Estructura de Clases
+Dideño de la Estructura de Clases
+URL
+TEMA 3.4
+Diseño de la Arquitectura
+Diseño de la Arquitectura
+URL
+Implementación
+Video con la realización de la implementación del software partiendo de los Diagramas del diseño.
+URL
+Implementacion_SAP.pdf
+Archivo
+Transparencias usadas en el video sobre la implementación.
+Codigo_SAP.zip
+Archivo
+Ejemplo de Código en JAVA
+TEMA 4 Otros Aspectos de la Ingeniería del Software
+Planificación de Proyectos Software
+URL
+Verificación y Validación
+URL
+Mantenimiento de Software
+URL
+Resumen del Tema 4
+Archivo
+Prácticas
+Prácticas
+Supuestos de ejemplo
+Carpeta
+Práctica 0. Introducción a Visual Paradigm.
+Guión de la práctica 0 y fichero con los diagramas.
+Guión de Prácticas
+DiagramasP0.pdf
+practica0.pdf
+Descargar carpeta
+Práctica 1
+. Ingeniería de requisitos: Lista inicial de requisitos.
+Guión de la práctica 1
+Archivo
+Práctica 2. Ingeniería de requisitos: Modelo de casos de uso
+Guión de la práctica 2
+Archivo
+Gestión de una agencia de alquiler de viviendas. Modelo de casos de uso (1ª parte)
+Presentación de la Práctica 2
+URL
+Guía para la realización de la práctica 2
+Guión de la práctica 2. 2ª parte
+Aclaraciones.pdf
+Alquintervivac.pdf
+Practica2-Parte 2.pdf
+Descargar carpeta
+Presentación de la parte 2 de la práctica 2
+URL
+Guía para la realización de la práctica 2 - Parte 2
+Práctica 3
+. Ingeniería de requisitos: Análisis y especificación de requisitos
+Guión de la práctica 3
+Archivo
+Gestión de una agencia de alquiler de viviendas. Análisis y especificación de requisitos (1ª parte)
+Presentación de la práctica 3
+URL
+Videoguía para la realización de la
+práctica 3
+Gestión de una agencia de alquiler de viviendas. Análisis y especificación de requisitos (2ª parte)
+Guión de la Práctica 3. 2ª parte
+MCyDSS.pdf
+Practica3-Parte 2.pdf
+Descargar carpeta
+Presentación de la práctica 3 - Parte 2
+URL
+Videoguía para la realización de la
+práctica 3
+- Parte 2
+Práctica 4
+. Diseño
+Guión de la práctica 4
+Carpeta
+Presentación de la práctica 4
+URL
+Videoguía para la realización de la
+práctica 4
+Entrega de prácticas
+Entrega de prácticas
+Aquí se reflejarán las tareas a realizar en prácticas, así como las entregas.
+Práctica 0
+Tarea
+Restringido
+Disponible hasta
+1 de marzo de 2020, 23:55
+Entrega voluntaria de la práctica 0.
+Práctica 1
+Tarea
+Entrega de la práctica 1
+Práctica 2 - Parte 1
+Tarea
+Primera entrega de la práctica 2.
+Fecha límite de entrega: domingo 29 de marzo a las 23:55
+.
+Práctica 2. 2ª entrega
+Tarea
+Segunda entrega de la práctica 2.
+Práctica 3
+Tarea
+Primera entrega de la práctica 3.
+Práctica 3. 2ª entrega
+Tarea
+Segunda entrega de la
+práctica 3
+.
+Práctica 4
+Tarea
+Entrega de la práctica 4.
+GRUPO A
+GRUPO A
+Restringido
+No disponible hasta que: se pertenezca al grupo
+A
+GRUPO B
+GRUPO B
+Foro teoría Grupo B
+Estad atentos a este foro en el cuál se irá poniendo información sobre la parte teórica de la asignatura.
+Grupo B1 de prácticas
+Foro
+Restringido
+No disponible hasta que: se pertenezca al agrupamiento
+B1
+Estad atentos al foro.
+Grupo B2 de prácticas
+Foro
+Estad atentos al foro
+Grupo B3 de prácticas
+Foro
+Restringido
+No disponible hasta que: se pertenezca al agrupamiento
+B3
+Estad atentos al foro.
+Grupo B:Problemas 1
+Tarea
+Entregue un archivo pdf con la solución de uno de los
+problemas
+de las relaciones 1.1 o 1.2.
+Grupo B: Problema 2_1.1 (clase)
+Tarea
+Problema 1 de la relación 2_1
+Grupo B: Problema 2_1.2(clase)
+Tarea
+Problema 2 de la relación 2_1
+Grupo B: Problema CU (Clase)
+Tarea
+Enumeración de actores y CU.
+Grupo B: Problemas 2.1
+Tarea
+Entregue en un fichero pdf la solución a uno de los siguientes ejercicios de la relación 2.1
+Ejercicios individuales: 3 o 7
+Ejercicios en grupo de 4 alumnos: 4, 5 o 6
+Si escoge un ejercicio individual no haga un ejercicio en grupo, ni viceversa.
+Grupo B: Problema 2.2.5
+Tarea
+Entregar el problema 5 de la relación 2.2
+Grupo B: Problema de Diagrama de clases del ESR
+Tarea
+Entregar el diagrama de clases del problema de la ESR descrito en la zona de vídeos de la asignatura
+https://pradogrado1920.ugr.es/mod/url/view.php?id=208167
+Grupo B: Entrega del ejercicio 1 y 2 de la relación de problemas 2.3
+Tarea
+. Ejercicio pedido para casa en la semana del 14 Abr al 17 Abril. Es un ejercicio individual. Se entrega un sólo pdf con la respuesta a los dos ejercicios.
+Soluciones ejercicios 1.1 y 1.2 de la relación 2.3
+Archivo
+Grupo B: Entrega del ejercicio 9 de la relación de problemas 2.3 - "Gestión de Almacenes"
+Tarea
+. Ejercicio pedido para casa en la semana del 14 Abr al 17 Abril. Es un ejercicio individual. Se entrega un sólo pdf con la respuesta al ejercicicio
+Grupo B: Ejercicio de análisis de requisitos. DSS
+Tarea
+Partiendo del diagrama de conceptos de la gestión de la cadena de almacenes  y de la descripción del supuesto, tenéis que realizar el Diagrama de Secuencia del Sistema (DSS) (ver los videos de esta semana) asociado a este supuesto. Vamos a hacer un sólo diagrama para todo el supuesto y tenéis que tener en cuenta que no partimos de lo que habitualmente partiríamos, que serian los diagramas de casos de uso y las plantillas extendidas. En este caso tenéis que usar la descripción en texto (enunciado del ejercicio 9) e ir pensando qué operaciones son necesarias según la descripción dada y usar el diagrama de conceptos (solución dada por nosotros) para los parámetros de las operaciones. Este ejercicio lo tenéis que entregar antes del lunes día 27 de abril.
+MAnalisis_Restaurante.pdf
+Archivo
+Ejemplo de Modelo del Análisis (Diagrama de conceptos, DSS, Contratos) obtenido de un CU relacionado con un Restaurante.
+Supuesto del centro de salud
+Archivo
+Modelo conceptual, parte del DSS y sus contratos correspondientes.
+Grupo B: Ejercicio de análisis de requisitos. Contratos
+Tarea
+Grupo B: Contratos del ejercicio 9
+Tarea
+ContratosAlmacen.pdf
+Archivo
+Grupo B: Diagrama comunicación elegir proyecto de SAP
+Tarea
+Como
+ejercicio
+para esta semana os proponemos que intentéis
+hacer vuestro primer diagrama de comunicación. Para ellos vamos a hacer la
+operación elegirProyecto (idAlumno, idProyecto, prio)
+. Fijaros sobre todo en
+el proceso seguido para la realización de la operación "definirProyecto" que
+esta explicado en el tema 3.2 (T19 a la T30). El contrato de la operación lo
+tenéis en la transparencia numero 31 y los objetos involucrados en la 32. Para
+los que queráis prácticar algo más, os propongo que intentéis hacer los diagramas
+de comunicación de las operaciones que aparecen en la transparencia 35. Aunque
+no es obligatorio, si hacéis alguno de esos diagramas podéis incluirlos en la
+entrega del ejercicio junto con el otro diagrama pedido.
+La entrega de los diagramas es para el lunes 11 a las 14:00
+.
+Solución al ejercicio de la operación elegirProyecto pedido
+Archivo
+Video del VIDEO.Diagrama de comunicación de la operación elegirProyecto
+URL
+Solución al ejercicio optativo del diagrama de comunicación de la operación "incluirNotaAsignatura"
+Archivo
+ModeloDiseño_CentroSalud.pdf
+Archivo
+Ejemplo parcial del Modelo de Diseño del
+supuesto del centro de salud
+. Esta formado por unos cuantos diagramas de comunicación, el diagrama de clases del diseño obtenido para esas operaciones y algo de la implementación de ejemplo.
+Grupo B:D. Comunicación de ops. del Supuesto de almacén
+Tarea
+Retomamos el supuesto
+de la gestión de almacenes. Como tenéis una solución a los contratos que os
+propusimos hace 2 semanas, ver
+enlace
+de los contratos, os propongo que  realicéis los siguientes 3
+diagramas de comunicación:
+- idPedido =
+crearPedido
+(idCliente, idAlmacen, idEmpleado,
+listaidProducto, listaCantidad, listaPrecioVenta)
+-
+altaProductoAlmacen
+(idAlmacen, idProducto, stockMinimo,
+cantidadPedir)
+- InfoPedido =
+mostrarPedido
+(idPedido)
+Estos son los diagramas que hay que entregar de forma
+obligatoria, pero podéis intentar el resto de operaciones de las que tenemos
+contratos y entregarlas si queréis.
+Grupo B: Diseño del supuesto del almacén
+Tarea
+Diagramas de comunicación del supuesto del almacén
+Archivo
+Grupo B: Actividad tema 4
+Tarea
+Responder V/F a las preguntas del cuestionario. Pueden usarse dos o tres líneas para justificar las respuestas.
+Grupo B: nota de exámenes y problemas durante el curso
+Tarea
+Grupo B2: Notas de prácticas
+Tarea
+Notas de prácticas sobre 5 puntos.
+Grupo B: Notas examen Junio
+Tarea
+Para revisión de examen solicitar tutoría remota.
+Grupo B: Nota teoría junio
+Tarea
+Nota de teoría Junio sobre 5 puntos.
+Grupo B: Nota final junio
+Tarea
+Nota de la asignatura en Junio sobre 10 puntos.
+GRUPO C
+GRUPO C
+Restringido
+No disponible hasta que: se pertenezca al grupo
+C
+GRUPO D
+GRUPO D
+Restringido
+No disponible hasta que: se pertenezca al grupo
+D
+Control de Asistencia
+Control de Asistencia
+Este bloque recoge todas las actividades de control de asistencia del curso
+Asistencia a Prácticas
+Exámenes
+Exámenes
+Prueba I
+Cuestionario
+La
+prueba consiste en un
+cuestionario tipo test con
+preguntas verdadero/falso
+sobre los temas 1 y 2.1, 2.2, 2.3 y 2.4.
+Las preguntas del test
+suman un punto si se responden correctamente, restan 0,5 puntos si se responden incorrectamente
+y no suman ni restan si no se responden.
+El cuestionario
+se abrirá a las 12:30 y se cerrará a las 13:00
+. Una vez realizado, ya no se puede volver a acceder al test.
+Durante los 30 minutos de duración del test, habrá una sesión de videoconferencia en Google Meet en la que estarán los profesores de la asignatura y donde podéis conectaros y comentar si tenéis algún tipo de problema.
+Esta videoconferencia es sólo para que informéis de
+problemas
+técnicos
+, no para realizar preguntas sobre los cuestionarios del tipo test, eso no esta permitido durante la prueba.
+https://meet.google.com/ysx-idzd-sdj
+El apodo de la reunión, por si no funciona el enlace es: problemascuestionario1_fis
+Posteriormente al cierre del cuestionario no se atenderán ningún tipo de
+problemas
+técnicos que no se hayan comunicado a los profesores vía la videoconferencia o correo electrónico durante el tiempo que dura la prueba.
+Los profesores.
+Prueba I NEAE
+Cuestionario
+Restringido
+No disponible hasta que: se pertenezca al grupo
+NEAE
+La
+prueba consiste en un
+cuestionario tipo test con
+preguntas verdadero/falso
+sobre los temas 1 y 2.1, 2.2, 2.3 y 2.4.
+Las preguntas del test
+suman un punto si se responden correctamente, restan 0,5 puntos si se responden incorrectamente
+y no suman ni restan si no se responden.
+El cuestionario
+se abrirá a las 12:30 y se cerrará a las 13:15
+. Una vez realizado, ya no se puede volver a acceder al test.
+Durante los 30 minutos de duración del test, habrá una sesión de videoconferencia en Google Meet en la que estarán los profesores de la asignatura y donde podéis conectaros y comentar si tenéis algún tipo de problema.
+Esta videoconferencia es sólo para que informéis de
+problemas
+técnicos
+, no para realizar preguntas sobre los cuestionarios del tipo test, eso no esta permitido durante la prueba.
+https://meet.google.com/ysx-idzd-sdj
+El apodo de la reunión, por si no funciona el enlace es: problemascuestionario1_fis
+Posteriormente al cierre del cuestionario no se atenderán ningún tipo de
+problemas
+técnicos que no se hayan comunicado a los profesores vía la videoconferencia o correo electrónico durante el tiempo que dura la prueba.
+Los profesores.

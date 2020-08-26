@@ -1,0 +1,181 @@
+Diagrama de temas
+General
+General
+Avisos
+Foro
+Novedades
+Foro
+Foro de dudas
+Apuntarse a grupo
+Auto-selección de grupo
+Material online de teoría (seguimiento no presencial de las clases)
+Material online de teoría (seguimiento no presencial de las clases)
+Instrucciones para el seguimiento online de la asignatura
+Archivo
+Ejercicios Greedy Resueltos
+Archivo
+Apuntes sobre Eficiencia
+Archivo
+Apuntes sobre el método de la ecuación característica
+Archivo
+Apuntes sobre la técnica Divide y Vencerás
+Archivo
+Apuntes sobre la técnica Greedy
+Archivo
+Apuntes sobre la técnica de Programación Dinámica
+Archivo
+Tema 1
+Tema 1
+presentacion
+Archivo
+p1-eFICIENCIA
+Archivo
+Seguimiento de las clases prácticas (abril)
+Archivo
+Errores de la práctica de eficiencia
+Archivo
+Tema 2
+Tema 2
+Entrega P1 individual B2 Martes (11.30)
+Tarea
+Entrega P1 individual  B3 (miercoles  11.30)
+Tarea
+Entrega P1 individual B1 (miercoles 12.30)
+Tarea
+Entrega P1 grupal (martes 11.30)
+Tarea
+P1 grupal (miercoles  11.30)
+Tarea
+P1 grupo (miercoles 12.30)
+Tarea
+Práctica de DyV
+Carpeta
+Os dejo el guion y los generadores de los ejercicios
+Entrega P2 GRUPAL. Grupo B2
+Tarea
+Practica de DyV
+Consta de 2 ejercicios. El primero para todos y uno delos 4 según el sorteo (fichero Word).
+Entrega P2 GRUPAL) Grupo  B3
+Tarea
+Practica de DyV.
+Consta de 2 ejercicios. El primero para todos y uno delos 4 según el sorteo (fichero Word).
+Entrega P2 (GRUPO) Grupo B1
+Tarea
+Practica de DyV
+Consta de 2 ejercicios. El primero para todos y uno delos 4 según el sorteo (fichero Word).
+Práctica greedy
+tsp_escenarios_ejecucion.zip
+untitled.pdf
+Descargar carpeta
+seguimiento clases prácticas 13 de abril
+Archivo
+Seguimiento Practicas Greedy 17 abril
+Archivo
+Entrega P3. GRupo B2
+Tarea
+Entrega de la memoria,
+presentacion
+y código correspondiente a la práctica 3.  subgrupos. La entrega es  el 4 de mayo a las 0.05.
+Entrega P3. Grupo B3
+Tarea
+Entrega de la memoria,
+presentacion
+y código correspondiente a la práctica 3.  subgrupos. La entrega es  el 4 de mayo a las 0.05.
+Entrega P3. Grupo B1
+Tarea
+Entrega de la memoria,
+presentacion
+y código correspondiente a la práctica 3.  subgrupos. La entrega es  el 4 de mayo a las 0.05.
+Práctica 4
+Archivo
+Práctica de Programación Dinámica. Entrega de la memoria,
+presentacion
+y código correspondiente a la práctica 4.  . La entrega es  el 18 de mayo a las 23:59.
+Entrega P4 (lunes 11:30). Grupo B2.
+Tarea
+Entrega P4 (martes 11:30). Grupo B3.
+Tarea
+Entrega P4 (martes 12:30). Grupo B1.
+Tarea
+Práctica 5
+Archivo
+Entrega de la memoria,
+presentacion
+y código correspondiente a la práctica 5.  . La entrega es  el 8 de junio a las 23:59.
+Entrega P5. Grupo B2
+Tarea
+Entrega P5. Grupo B3
+Tarea
+Entrega P5. Grupo B1
+Tarea
+Material para el grupo C
+Material para el grupo C
+No disponible
+Material para el grupo D
+Material para el grupo D
+No disponible
+Materiales de prácticas C1,C2,C3
+Materiales de prácticas C1,C2,C3
+Avisos
+Foro
+Presentación de prácticas
+Archivo
+Enunciado Práctica P1
+Archivo
+Códigos Práctica P1
+Archivo
+Entrega C1-P1-Individual
+Tarea
+Entrega C2-P1-Individual
+Tarea
+Entrega C3-P1-Individual
+Tarea
+Entrega C1-P1-Equipos
+Tarea
+Entrega C2-P1-Equipos
+Tarea
+Entrega C3-P1-Equipos
+Tarea
+Enunciado Práctica P2
+Archivo
+Códigos Práctica P2
+Archivo
+Entrega C1-P2
+Tarea
+Entrega C2-P2
+Tarea
+Entrega C3-P2
+Tarea
+Enunciado Práctica P3
+Archivo
+Datos TSP Práctica P3
+Archivo
+Entrega C1-P3
+Tarea
+Entrega C2-P3
+Tarea
+Entrega C3-P3
+Tarea
+Encuesta Autoevaluación P1
+Encuesta Autoevaluación P2
+Encuesta Autoevaluación P3
+Enunciado Práctica P4
+Archivo
+Entrega C1-P4
+Tarea
+Entrega C2-P4
+Tarea
+Entrega C3-P4
+Tarea
+Encuesta Autoevaluación P4
+Enunciado Práctica P5
+Archivo
+Entrega C1-P5
+Tarea
+Entrega C2-P5
+Tarea
+Entrega C3-P5
+Tarea
+Encuesta Autoevaluación P5
+Convocatoria Extraordinaria
+Convocatoria Extraordinaria

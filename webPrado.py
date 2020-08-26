@@ -6,11 +6,13 @@ from selenium import webdriver
 import time
 
 # Parsing the HTML
-from bs4 import BeautifulSoup
+import bs4
 
 # OS Actions
 import os
 
+# Differences
+import difflib
 
 #   PRE START SEQUENCE
 # Starting the driver to get to the webpage
@@ -33,8 +35,6 @@ if os.path.isfile(COURFILE):
 else:
     driver.quit()
     raise Exception("A courseList.txt file is needed.")
-
-
 
 if os.path.isfile(LOGON):
     with open(LOGON) as f:
@@ -80,11 +80,14 @@ for i in courses:
     print("Done.")
     print("Saving HTML...")
     time.sleep(5)
-    body = driver.find_element_by_xpath("/html/body/div[1]/div[3]/div/div[3]/div/section/div/div")
-    text = body.get_attribute('innerHTML')
+    #body = driver.find_element_by_xpath("/html/body/div[1]/div[3]/div/div[3]/div/section/div/div")
+    body = driver.find_element_by_id('region-main')
+    #textHTML = body.get_attribute('innerHTML')
+    parsedHTML = bs4.BeautifulSoup(body.get_attribute('innerHTML'))
+    text = list(parsedHTML.stripped_strings)
 
-    file_ = open('page'+i+'.html','w')
-    file_.write(text)
+    file_ = open('courses/page_'+i+'.txt','w')
+    file_.write('\n'.join(text))
     file_.close()
     print("Done.")
     driver.execute_script("window.history.go(-1)")
@@ -92,6 +95,42 @@ for i in courses:
     count += 1
 
 
+print("Waiting a few secs...")
+time.sleep(10)
+count = 1
+
+for i in courses:
+    print(i)
+    print(count,"/",len(courses))
+    actualCourse = driver.find_element_by_xpath("//h4[contains(text(),'"+i+"')]")
+    # fis = driver.find_element_by_xpath("//h4[contains(text(),'ESTADÍSTICA - 1920_msegovia@ugr.es_E')]")
+    actualCourse.click()
+    print("Done.")
+    print("Saving HTML...")
+    time.sleep(5)
+    #body = driver.find_element_by_xpath("/html/body/div[1]/div[3]/div/div[3]/div/section/div/div")
+    body = driver.find_element_by_id('region-main')
+    #textHTML = body.get_attribute('innerHTML')
+    parsedHTML = bs4.BeautifulSoup(body.get_attribute('innerHTML'))
+    text = list(parsedHTML.stripped_strings)
+
+    file_ = open('courses/page_'+i+'__2.txt','w')
+    file_.write('\n'.join(text))
+    file_.close()
+    print("Done.")
+    driver.execute_script("window.history.go(-1)")
+    time.sleep(5)
+    count += 1
+    
+print("Comparing for changes...")
+for i in courses:
+    print(i)
+    print(count,"/",len(courses))
+    txt1=open('courses/page_'+i+'.txt','r').readlines()
+    txt2=open('courses/page_'+i+'__2.txt','r').readlines()
+
+    for line in difflib.unified_diff(txt1,txt2):
+        print(line)
 
 print("Task done. Quitting.")
 driver.quit()
