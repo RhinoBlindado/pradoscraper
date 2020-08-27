@@ -1,0 +1,5 @@
+# Ignore gecklog file
+geckodriver.log
+
+# Ignore cached pages
+page_*

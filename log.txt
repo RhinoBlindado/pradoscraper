@@ -1,0 +1,13 @@
+Changes in course ALGORÍTMICA - 1920_verdegay@ugr.es_B,C at 2020-08-27 19:37:11.117193
+
+--- 
++++ 
+@@ -57,0 +58,8 @@
++Apuntes del tema 7
++Archivo
++Transparencias del tema 7 Grafos Implicitos
++Archivo
++Transparencias del tema 7 El Metodo General BackTracking
++Archivo
++Transparencias del tema 7 El Metodo General Branch and Bound
++Archivo
