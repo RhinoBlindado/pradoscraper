@@ -50,14 +50,13 @@ def checkStatus():
     else:
         raise Exception("A loginInfo.txt file is needed.")
 
-    
     # Return relevant information to main.
     return logInfo, courses
 
 
 def logIn(logInfo, driver):
     print("Loading Prado...")
-    driver.get('https://pradogrado1920.ugr.es/')
+    driver.get('https://pradogrado2021.ugr.es/')
     print("Done.")
 
     # Navigating the login procedure 
@@ -105,9 +104,16 @@ for i in courses:
     body = driver.find_element_by_id('region-main')
     parsedHTML = bs4.BeautifulSoup(body.get_attribute('innerHTML'),features="html.parser")
     text = list(parsedHTML.stripped_strings)
-    file_ = open('courses/page_'+i+'_temp.txt','w')
+
+    # Check if there's a file already, if there is, save as temp to compare later.
+    if os.path.isfile('courses/page_'+i+'.txt'):
+        file_ = open('courses/page_'+i+'_temp.txt','w')
+    else:
+        file_ = open('courses/page_'+i+'.txt','w')
     file_.write('\n'.join(text))
     file_.close()
+
+
     print("Done.")
     driver.execute_script("window.history.go(-1)")
     time.sleep(5)
@@ -118,8 +124,8 @@ count = 0
 for i in courses:
     print(i)
     print(count+1,"/",len(courses))
-
-    if not filecmp.cmp('courses/page_'+i+'.txt','courses/page_'+i+'_temp.txt'):
+    
+    if os.path.isfile('courses/page_'+i+'_temp.txt') and not filecmp.cmp('courses/page_'+i+'.txt','courses/page_'+i+'_temp.txt'):
 
         txt1=open('courses/page_'+i+'.txt','r').readlines()
         txt2=open('courses/page_'+i+'_temp.txt','r').readlines()
@@ -140,7 +146,10 @@ for i in courses:
 
     else:
         print("No changes.")
-        os.remove('courses/page_'+i+'_temp.txt')
+        try :
+            os.remove('courses/page_'+i+'_temp.txt')
+        except:
+            pass
 
     count += 1
 
