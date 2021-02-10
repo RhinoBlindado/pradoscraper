@@ -20,18 +20,23 @@ import filecmp
 # Human Readable Timestamp
 from datetime import datetime
 
-
 #   FUNCTIONS
-#   PRE START SEQUENCE
 def checkStatus():
+    '''
+    @brief Check if the needed folders exist.
+    
+    
+    @returns    logInfo     The login information.
+                courses     List of the courses.
+    '''
+
     DIRPATH = './courses'
     COURFILE = DIRPATH+'/courseList.txt'
     LOGON = DIRPATH+'/loginInfo.txt'
 
     # Check if folder 'courses' exists.
-    if os.path.isdir(DIRPATH):   
-        pass
-    else:
+    if not os.path.isdir(DIRPATH):   
+        print("COURSES folder not found, making one.")
         os.mkdir('courses')
 
     # Check if there's the course list file.
@@ -55,6 +60,14 @@ def checkStatus():
 
 
 def logIn(logInfo, driver):
+    '''
+    @brief Realize the log in prodecure to Prado
+    
+    @param logInfo  List containing the email and password for Prado
+    
+    @param driver   Selenium object to interact with the website.
+    '''
+
     print("Loading Prado...")
     driver.get('https://pradogrado2021.ugr.es/')
     print("Done.")
@@ -76,84 +89,136 @@ def logIn(logInfo, driver):
 
     time.sleep(5)
 
-#   MAIN FUNCTION
-# Check current status of files.
-logInfo, courses = checkStatus()
+def courseRead(courses, driver):
+    '''
+    @brief Read the information in the courses.
 
-# Start up the driver
-driver = webdriver.Firefox()
+    @param courses  String list of the courses to read.
 
-# Login Procedure.
-logIn(logInfo, driver)
+    @param driver   Selenium object to interact with the website.     
+    '''
 
-# Accessing the courses.
-print("Accessing entries...")
-count = 1
+    # Accessing the courses.
+    print("Accessing entries...")
+    count = 1
 
-for i in courses:
-    print(i)
-    print(count,"/",len(courses))
+    for i in courses:
+        print(i)
+        print(count,"/",len(courses))
 
-    actualCourse = driver.find_element_by_xpath("//h4[contains(text(),'"+i+"')]")
-    actualCourse.click()
+        actualCourse = driver.find_element_by_xpath("//h4[contains(text(),'"+i+"')]")
+        actualCourse.click()
 
-    print("Done.")
-    print("Saving Data...")
+        print("Done.")
+        print("Saving Data...")
 
-    time.sleep(5)
-    body = driver.find_element_by_id('region-main')
-    parsedHTML = bs4.BeautifulSoup(body.get_attribute('innerHTML'),features="html.parser")
-    text = list(parsedHTML.stripped_strings)
+        time.sleep(5)
+        body = driver.find_element_by_id('region-main')
 
-    # Check if there's a file already, if there is, save as temp to compare later.
-    if os.path.isfile('courses/page_'+i+'.txt'):
-        file_ = open('courses/page_'+i+'_temp.txt','w')
-    else:
-        file_ = open('courses/page_'+i+'.txt','w')
-    file_.write('\n'.join(text))
-    file_.close()
+        # Parse the HTML so it removes all the clutter, only leaves human-readable text.
+        parsedHTML = bs4.BeautifulSoup(body.get_attribute('innerHTML'),features="html.parser")
+        text = list(parsedHTML.stripped_strings)
+
+        # Check if there's a file already, if there is, save as temp to compare later.
+        if os.path.isfile('courses/page_'+i+'.txt'):
+            file_ = open('courses/page_'+i+'_temp.txt','w')
+        else:
+            file_ = open('courses/page_'+i+'.txt','w')
+        file_.write('\n'.join(text))
+        file_.close()
 
 
-    print("Done.")
-    driver.execute_script("window.history.go(-1)")
-    time.sleep(5)
-    count += 1
+        print("Done.")
+        driver.execute_script("window.history.go(-1)")
+        time.sleep(5)
+        count += 1
 
-print("Comparing for changes...")
-count = 0
-for i in courses:
-    print(i)
-    print(count+1,"/",len(courses))
-    
-    if os.path.isfile('courses/page_'+i+'_temp.txt') and not filecmp.cmp('courses/page_'+i+'.txt','courses/page_'+i+'_temp.txt'):
 
-        txt1=open('courses/page_'+i+'.txt','r').readlines()
-        txt2=open('courses/page_'+i+'_temp.txt','r').readlines()
+def courseDiff(courses, driver):
+    '''
+    @brief Check differences between old and new versions of the saved courses.
 
-        timeObj = datetime.now()
-        log = 'Changes in course '+i+' at '+str(timeObj)+'\n\n'
+    @param courses  String list of the courses to read.
 
-        for line in difflib.unified_diff(txt1,txt2,n=0):
-            print(line)
-            log += line 
+    @param driver   Selenium object to interact with the website.
 
-        log_ = open('log.txt','w')
-        log_.write(log)
-        log_.close()
+    @return Returns a string object containing the differences between the courses.    
+    '''
 
-        os.remove('courses/page_'+i+'.txt')
-        os.rename('courses/page_'+i+'_temp.txt','courses/page_'+i+'.txt')
+    print("Comparing for changes...")
+    count = 0
+    log = ""
 
-    else:
-        print("No changes.")
-        try :
+    for i in courses:
+        print(i)
+        print(count+1,"/",len(courses))
+        log += ("---- COURSE ["+ str(count+1) + "/" + str(len(courses)) + "]: " + i + "\n")
+
+        # Check that the temp file exists, since if it doesn't it means its the first time running and there's nothing else to compare.
+        # And also check that both files are not the same, sice if they're the same, there's no reason to compare them.
+        if os.path.isfile('courses/page_'+i+'_temp.txt') and not filecmp.cmp('courses/page_'+i+'.txt','courses/page_'+i+'_temp.txt'):
+
+            txt1 = open('courses/page_'+i+'.txt','r').readlines()
+            txt2 = open('courses/page_'+i+'_temp.txt','r').readlines()
+
+
+            for line in difflib.unified_diff(txt1, txt2, n=0):
+                print(line)
+                log += line 
+
+            os.remove('courses/page_'+i+'.txt')
+            os.rename('courses/page_'+i+'_temp.txt','courses/page_'+i+'.txt')
+
+        else:
+            print("No changes.")
+            log += ("\tNo changes.\n")
             os.remove('courses/page_'+i+'_temp.txt')
-        except:
-            pass
 
-    count += 1
 
-print("Task done. Quitting.")
-driver.quit()
+        log += ("\n\n")
+        count += 1
+    
+    return log
+
+def logPrint(log):
+
+    file = open('log.txt','a')
+    theTime = datetime.now()
+
+    file.write(('---------------- CHANGES @ ' + theTime.strftime("%I:%M %p, %A %d/%m/%Y") + ' ---------------- \n'))
+    file.write(log + "\n\n")
+    file.close()
+
+
+
+#   MAIN FUNCTION
+def main():
+    # Check current status of files.
+    logInfo, courses = checkStatus()
+
+    # Start up the driver
+    driver = webdriver.Firefox()
+
+    # Login Procedure.
+    logIn(logInfo, driver)
+
+    # Read the course list
+    courseRead(courses, driver)
+
+    # Compare for changes
+    logDiff = courseDiff(courses, driver)
+
+    # Print differences to logfile
+    logPrint(logDiff)
+
+    # Ending procedure, closing the Selenium browser.
+    print("Task done. Quitting.")
+    driver.quit()
+
+
+# Setting up the script enviroment
+if __name__ == "__main__":
+    main()
+    
 
 # exec(open("./webPRADO.py").read())
