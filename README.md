@@ -14,9 +14,9 @@ _:warning: Esta información está sujeta a cambios a medida que avanza el proye
 ### Prerequisitos
   * Se debe tener instalado [Selenium junto al geckodriver](https://selenium-python.readthedocs.io/installation.html) para Python.
   
-## Instalación
+### Instalación y Uso
   1. Clonar el repositiorio.
   2. Dentro de la carpeta `/courses/` se debe tener:
         * `courseList.txt`: Fichero de texto en el que cada línea debe tener **exactamente** el nombre de la asignatura en Prado, una por línea. Se recomienda copiar directamente de Prado el nombre.
         * `loginInfo.txt` : Fichero con la información de inicio de sesión para Prado. En la primera línea el correo, en la segunda la constraseña. **Aún no se está implementada la seguridad, estos datos están en texto plano. Usar con cautela si el equipo es compartido. Se recomienda eliminar permanentemente una vez finalizadas las pruebas**
- 3. Iniciar el programa mediante la consola con `python3 /webPrado.py`
+ 3. Iniciar el programa mediante la consola con `python3 /webPrado.py`. Si no hay que añadir más asignaturas, una vez que se completa el paso 1 y 2, solo se debe ejecutar este paso para ver las diferencias.
