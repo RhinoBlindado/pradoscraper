@@ -1,6 +1,9 @@
+#!/usr/bin/env python3
+
 #   MODULES
 # Web 
 from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
 
 # Timing
 import time
@@ -19,6 +22,14 @@ import filecmp
 
 # Human Readable Timestamp
 from datetime import datetime
+
+# Database support
+import sqlite3
+from sqlite3 import Error
+
+#Exception handling
+import traceback
+import logging
 
 #   FUNCTIONS
 def checkStatus():
@@ -106,30 +117,33 @@ def courseRead(courses, driver):
         print(i)
         print(count,"/",len(courses))
 
-        actualCourse = driver.find_element_by_xpath("//h4[contains(text(),'"+i+"')]")
-        actualCourse.click()
-
-        print("Done.")
-        print("Saving Data...")
-
-        time.sleep(5)
-        body = driver.find_element_by_id('region-main')
-
-        # Parse the HTML so it removes all the clutter, only leaves human-readable text.
-        parsedHTML = bs4.BeautifulSoup(body.get_attribute('innerHTML'),features="html.parser")
-        text = list(parsedHTML.stripped_strings)
-
-        # Check if there's a file already, if there is, save as temp to compare later.
-        if os.path.isfile('courses/page_'+i+'.txt'):
-            file_ = open('courses/page_'+i+'_temp.txt','w')
+        try:
+            actualCourse = driver.find_element_by_xpath("//h4[contains(text(),'"+i+"')]")
+        except NoSuchElementException:
+            print("Error: Course "+i+" cannot be found!")
         else:
-            file_ = open('courses/page_'+i+'.txt','w')
-        file_.write('\n'.join(text))
-        file_.close()
+            actualCourse.click()
 
+            print("Done.")
+            print("Saving Data...")
+
+            time.sleep(5)
+            body = driver.find_element_by_id('region-main')
+
+            # Parse the HTML so it removes all the clutter, only leaves human-readable text.
+            parsedHTML = bs4.BeautifulSoup(body.get_attribute('innerHTML'),features="html.parser")
+            text = list(parsedHTML.stripped_strings)
+
+            # Check if there's a file already, if there is, save as temp to compare later.
+            if os.path.isfile('courses/page_'+i+'.txt'):
+                file_ = open('courses/page_'+i+'_temp.txt','w')
+            else:
+                file_ = open('courses/page_'+i+'.txt','w')
+            file_.write('\n'.join(text))
+            file_.close()
+            driver.execute_script("window.history.go(-1)")
 
         print("Done.")
-        driver.execute_script("window.history.go(-1)")
         time.sleep(5)
         count += 1
 
@@ -156,23 +170,29 @@ def courseDiff(courses, driver):
 
         # Check that the temp file exists, since if it doesn't it means its the first time running and there's nothing else to compare.
         # And also check that both files are not the same, sice if they're the same, there's no reason to compare them.
+
         if os.path.isfile('courses/page_'+i+'_temp.txt') and not filecmp.cmp('courses/page_'+i+'.txt','courses/page_'+i+'_temp.txt'):
 
-            txt1 = open('courses/page_'+i+'.txt','r').readlines()
-            txt2 = open('courses/page_'+i+'_temp.txt','r').readlines()
+            try:
+                txt1 = open('courses/page_'+i+'.txt','r').readlines()
+                txt2 = open('courses/page_'+i+'_temp.txt','r').readlines()
+            except FileNotFoundError:
+                print("No changes.")
+                log += ("\tNo changes.\n")
+            else:
+                for line in difflib.unified_diff(txt1, txt2, n=0):
+                    print(line)
+                    log += line 
 
-
-            for line in difflib.unified_diff(txt1, txt2, n=0):
-                print(line)
-                log += line 
-
-            os.remove('courses/page_'+i+'.txt')
-            os.rename('courses/page_'+i+'_temp.txt','courses/page_'+i+'.txt')
+                os.remove('courses/page_'+i+'.txt')
+                os.rename('courses/page_'+i+'_temp.txt','courses/page_'+i+'.txt')
 
         else:
             print("No changes.")
             log += ("\tNo changes.\n")
-            os.remove('courses/page_'+i+'_temp.txt')
+            
+            if(os.path.isfile('courses/page_'+i+'_temp.txt')):
+                os.remove('courses/page_'+i+'_temp.txt')
 
 
         log += ("\n\n")
@@ -190,30 +210,54 @@ def logPrint(log):
     file.close()
 
 
+def getCourseList(driver):
+    '''
+    Get the courses list from PRADO
+    '''
+
+    # Find the drop-down menu
+    dropDown = driver.find_element_by_css_selector('li.dropdown:nth-child(1)')
+
+    courseList = dropDown.find_elements_by_class_name('dropdown-item')
+
+    for i in range(1, len(courseList)):
+        print(courseList[i].text)
+
 
 #   MAIN FUNCTION
 def main():
-    # Check current status of files.
-    logInfo, courses = checkStatus()
 
-    # Start up the driver
-    driver = webdriver.Firefox()
+    try:
+        # Check current status of files.
+        logInfo, courses = checkStatus()
 
-    # Login Procedure.
-    logIn(logInfo, driver)
+        # Start up the driver
+        driver = webdriver.Firefox()
 
-    # Read the course list
-    courseRead(courses, driver)
+        # Login Procedure.
+        logIn(logInfo, driver)
 
-    # Compare for changes
-    logDiff = courseDiff(courses, driver)
 
-    # Print differences to logfile
-    logPrint(logDiff)
+        #getCourseList(driver)
 
-    # Ending procedure, closing the Selenium browser.
-    print("Task done. Quitting.")
-    driver.quit()
+        # Read the course list
+        courseRead(courses, driver)
+
+        # Compare for changes
+        logDiff = courseDiff(courses, driver)
+
+        # Print differences to logfile
+        logPrint(logDiff)
+        
+    except Exception as excpt:
+        print("An error ocurred: "+str(excpt))
+        traceback.print_exc()
+    else:
+        # Ending procedure, closing the Selenium browser.
+        print("Task done. Quitting.")
+    finally:
+        driver.quit()
+
 
 
 # Setting up the script enviroment
